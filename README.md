@@ -13,7 +13,7 @@ Everything indicated by the "$" means that what follows is written in the termin
     - write the commit message on top line 
     - hit escape key 
     - $ :x
-    - $ git push origin head:main
+    - $ git push origin head
   
   # Pull request through git 
   
