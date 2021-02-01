@@ -1,22 +1,22 @@
-# Website
+# Website front-end
+
 official website for Great Neck North's Computer Science Club
 
 Everything indicated by the "$" means that what follows is written in the terminal/command prompt
 
- # Installing dependancies
+# Installing dependancies
 
-    - $npm install 
-  
- # Comitting through git 
+    - $npm install
+
+# Comitting through git
+
     - $ git add .
     - $ git commit -a
-    - write the commit message on top line 
-    - hit escape key 
+    - write the commit message on top line
+    - hit escape key
     - $ :x
     - $ git push origin head
-  
-  # Pull request through git 
-  
+
+# Pull request through git
+
     - $ git pull
-  
-  
