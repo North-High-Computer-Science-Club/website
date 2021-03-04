@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="script.js" defer></script>
         <title>Home</title>
+
+        <!--Deferring script imports so that they load after HTML rendering-->
+
+        <!--Layout script imports-->
+
+        <script src="script.js" defer></script>
+        <script src="./layouts/bootstrap.js" defer></script>
+        <script src="./layouts/navbar.js" defer></script>
+
+        <!--Content script imports-->
+
+        <script src="./js/about-us.js" defer></script>
+        <script src="./js/members.js" defer></script>
+        <script src="./js/contact.js" defer></script>
+
+        <!--Style imports-->
+
         <link rel="stylesheet" href="./main.css" />
     </head>
+    
     <body>
-        <section> 
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark"></nav>
+
+        <section id="home" class="section"> 
             <!--TODO homepage-->
         </section>
 
-        <section>
+        <section id="about-us" class="section">
             <!--TODO about us-->
         </section>
 
-        <section>
+        <section id="members" class="section">
             <!--TODO members-->
         </section>
 
-        <section>
+        <section id="terminal" class="section">
             <!--TODO interactive terminal-->
         </section>
 
-        <section>
+        <section id="contact" class="section">
             <!--TODO contact-->
         </section>
         
-        <footer>
+        <footer id="footer" class="section">
 
         </footer>
     </body>
