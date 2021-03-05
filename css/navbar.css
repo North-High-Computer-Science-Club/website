@@ -1,12 +1,13 @@
 /* 
-  Edit made by Alex Khazzam on 3/5/21 
-  -----------------------------------
-  Styling the #navbar, #logo, #search, ::placeholder and .nav-link   
+Edit made by Alex Khazzam on 3/5/21 
+-----------------------------------
+Styling the #navbar, #logo, #search, ::placeholder, .nav-link and #about   
 */
 
 #navbar {
   position: fixed; /* fixed positioning makes element stay at the top of the page */
   width: 100%; /* takes up entire page width */
+  box-shadow: 1px 1px 5px rgba(32, 32, 32, 0.87);
 }
 
 #logo {
@@ -29,6 +30,10 @@
 .nav-link {
   color: white !important;
   letter-spacing: 1px;
+}
+
+#about {
+  color: rgb(7, 187, 61) !important;
 }
 
 .nav-link,

@@ -15,8 +15,11 @@ navbar.innerHTML = `<a class="navbar-brand" href="#"><img src="./images/navbar/l
     <li class="nav-item">
       <a class="nav-link" href="#" id="contact"></a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="website"></a>
+    </li>
   </ul>
-  <form class="form-inline my-2 my-lg-0">
+  <form class="form-inline my-2 my-lg-0" id="search-wrapper">
     <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
   </form>
 </div>`;

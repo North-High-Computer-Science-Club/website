@@ -9,6 +9,7 @@
 const aboutLink = document.getElementById('about');
 const membersLink = document.getElementById('members');
 const contactLink = document.getElementById('contact');
+const websiteLink = document.getElementById('website');
 
 const printLink = (linkId, link, iteration, printNextLink) => {
   setTimeout(() => {
@@ -22,8 +23,12 @@ const printLink = (linkId, link, iteration, printNextLink) => {
   }, 50);
 };
 
-printLink(aboutLink, 'About', 0, () => {
-  printLink(membersLink, 'Members', 0, () => {
-    printLink(contactLink, 'Contact', 0, () => {});
+printLink(aboutLink, '> About', 0, () => {
+  printLink(membersLink, '> Members', 0, () => {
+    printLink(contactLink, '> Contact', 0, () => {
+      printLink(websiteLink, '> This Website', 0, () => {
+        console.log('Callback hell complete...');
+      });
+    });
   });
 });
