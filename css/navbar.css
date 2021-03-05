@@ -1,1 +1,46 @@
-/* TODO
+/* 
+  Edit made by Alex Khazzam on 3/5/21 
+  -----------------------------------
+  Styling the #navbar, #logo, #search, ::placeholder and .nav-link   
+*/
+
+#navbar {
+  position: fixed; /* fixed positioning makes element stay at the top of the page */
+  width: 100%; /* takes up entire page width */
+}
+
+#logo {
+  width: 60px;
+  height: 60px;
+}
+
+#search {
+  border-bottom: 1px solid white !important;
+  background-color: transparent;
+  border-radius: 0px;
+  color: white;
+  border: none;
+}
+
+::placeholder {
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+  letter-spacing: 1px;
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  -webkit-transform: translateY(-2px);
+  text-shadow: 0 0.5rem 1rem rgb(0, 0, 0);
+  transform: translateY(-2px);
+}
