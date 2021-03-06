@@ -3,6 +3,7 @@
   -----------------------------------
   - Importing Google Font Inconsolata
   - Giving HTML page a background color
+  - Removing HTML page background color
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
@@ -10,8 +11,4 @@
 * {
   box-sizing: border-box !important;
   font-family: 'Inconsolata', monospace !important;
-}
-
-html {
-  background-color: #343a40 !important;
 }

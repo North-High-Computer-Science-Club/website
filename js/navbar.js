@@ -23,10 +23,10 @@ const printLink = (linkId, link, iteration, printNextLink) => {
   }, 50);
 };
 
-printLink(aboutLink, '> About', 0, () => {
-  printLink(membersLink, '> Members', 0, () => {
-    printLink(contactLink, '> Contact', 0, () => {
-      printLink(websiteLink, '> This Website', 0, () => {
+printLink(aboutLink, '</About>', 0, () => {
+  printLink(membersLink, '</Members>', 0, () => {
+    printLink(contactLink, '</Contact>', 0, () => {
+      printLink(websiteLink, '</Website>', 0, () => {
         console.log('Callback hell complete...');
       });
     });
