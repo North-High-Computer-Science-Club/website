@@ -1,9 +1,8 @@
 /*
     Edit made by Alex Khazzam on 3/5/2021
     -------------------------------------
-    Making nav links write across the page
-
-    DO NOT WORRY ABOUT UNDERSTANDING THE CODE ON THIS PAGE! THIS IS JUST FOR SHOW, AND PROVIDES NO FUNCTIONALITY TO THE WEBSITE EXCEPT MAKING IT MORE DYNAMIC. 
+    - Making nav links write across the page
+    - DO NOT WORRY ABOUT UNDERSTANDING THE CODE ON THIS PAGE! THIS IS JUST FOR SHOW, AND PROVIDES NO FUNCTIONALITY TO THE WEBSITE EXCEPT MAKING IT MORE DYNAMIC. 
 */
 
 const aboutLink = document.getElementById('about');
@@ -18,7 +17,7 @@ const printLink = (linkId, link, iteration, printNextLink) => {
     if (iteration !== link.length) {
       printLink(linkId, link, iteration, printNextLink);
     } else {
-      printNextLink();
+      printNextLink(); // Callback function
     }
   }, 50);
 };

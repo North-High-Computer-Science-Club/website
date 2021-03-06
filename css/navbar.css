@@ -1,8 +1,21 @@
 /* 
-Edit made by Alex Khazzam on 3/5/21 
------------------------------------
-Styling the #navbar, #logo, #search, ::placeholder, .nav-link and #about   
+  Edit made by Alex Khazzam on 3/5/21 
+  -----------------------------------
+  - Styling the #navbar, #logo, #search, ::placeholder, .nav-link and #about   
 */
+
+/* 
+  Edit made by Alex Khazzam on 3/6/21 
+  -----------------------------------
+  - Creating global color variable in :root to prevent repitition in the future
+  - Adding comment to some styles
+  - Adding bold coloring to nav links when hovered over 
+  - Getting rid of Bootstrap's default input box shadow on :focus
+*/
+
+:root {
+  --plainWhite: #ddd;
+}
 
 #navbar {
   position: fixed; /* fixed positioning makes element stay at the top of the page */
@@ -16,20 +29,30 @@ Styling the #navbar, #logo, #search, ::placeholder, .nav-link and #about
 }
 
 #search {
-  border-bottom: 1px solid white !important;
+  border-bottom: 1px solid var(--plainWhite) !important;
   background-color: transparent;
   border-radius: 0px;
-  color: white;
+  color: var(--plainWhite);
   border: none;
 }
 
+#search:focus {
+  /* Focus is a pseudo selector that is enabled once clicking into an input field */
+  box-shadow: none !important;
+}
+
 ::placeholder {
-  color: white !important;
+  /* Referencing the placeholder "search" inside #search */
+  color: var(--plainWhite) !important;
 }
 
 .nav-link {
-  color: white !important;
+  color: var(--plainWhite) !important;
   letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  font-weight: bold;
 }
 
 #about {
@@ -43,8 +66,9 @@ Styling the #navbar, #logo, #search, ::placeholder, .nav-link and #about
   transition: all 0.2s;
 }
 
-.nav-link:hover,
-.nav-link:active {
+.nav-link:hover {
+  /* Hover is a pseudo selector */
+  /* Providing styling to nav links when hovered over */
   -webkit-transform: translateY(-2px);
   text-shadow: 0 0.5rem 1rem rgb(0, 0, 0);
   transform: translateY(-2px);

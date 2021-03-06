@@ -20,6 +20,6 @@ navbar.innerHTML = `<a class="navbar-brand" href="#"><img src="./images/navbar/l
     </li>
   </ul>
   <form class="form-inline my-2 my-lg-0" id="search-wrapper">
-    <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
+    <input class="form-control mr-sm-2" id="search" placeholder="Search" aria-label="Search">
   </form>
 </div>`;
