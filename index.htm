@@ -21,11 +21,13 @@
     <script src="./js/members.js" defer></script>
     <script src="./js/contact.js" defer></script>
     <script src="./js/navbar.js" defer></script>
+    <script src="./js/home.js" defer></script>
 
     <!--Style imports-->
 
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/home.css" />
 
     <!--Bootstrap imports-->
 
@@ -61,7 +63,14 @@
     ></nav>
 
     <section id="home" class="section">
-      <!--TODO homepage-->
+      <div id="home__club-name-wrapper">
+        <h1 id="club-name"></h1>
+      </div>
+      <div id="home__cta-btns">
+        <button type="btn" class="btn btn-outline-success">Join</button>
+        <button type="btn" class="btn btn-success">Learn More</button>
+      </div>
+      <div class="loader">Loading...</div>
     </section>
 
     <section id="about-us" class="section">
