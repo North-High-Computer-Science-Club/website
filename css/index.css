@@ -12,3 +12,7 @@
   box-sizing: border-box !important;
   font-family: 'Inconsolata', monospace !important;
 }
+
+html {
+  height: 2000px;
+}
