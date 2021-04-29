@@ -13,7 +13,7 @@
 
     <!--Layout script imports-->
 
-    <script src="./layouts/navbar.js" defer></script>
+    <script src="./js/search.js" defer></script>
 
     <!--Content script imports-->
 
@@ -56,7 +56,34 @@
     <nav
       class="navbar navbar-expand-lg navbar navbar-dark bg-dark"
       id="navbar"
-    ></nav>
+    >
+    <a class="navbar-brand" href="#"><img src="./images/navbar/logo.png" id="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./pages/about.htm" id="about"><span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/members.htm" id="members"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/contact.htm" id="contact"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="website"></a>
+        </li>
+      </ul>
+      <div id="search-wrapper">
+        <input class="form-control mr-sm-2" id="search" placeholder="Search" aria-label="Search">
+        <button type="button" class="btn btn-outline-success" id="search-btn" data-toggle="modal" data-target="#exampleModal" onclick="filterResults()">
+          Search
+        </button>
+      </div>
+    </div>
+    </nav>
     <section id="home" class="section">
       <div id="home__club-name-wrapper">
         <h1 id="club-name"></h1>
@@ -67,5 +94,25 @@
       </div>
       <div class="loader">Loading...</div>
     </section>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul id="helpful-links">
+
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
   </body>
 </html>

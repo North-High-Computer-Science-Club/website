@@ -28,6 +28,10 @@
   height: 60px;
 }
 
+#search-wrapper {
+  display: flex;
+}
+
 #search {
   border-bottom: 1px solid var(--plainWhite) !important;
   background-color: transparent;

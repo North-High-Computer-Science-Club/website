@@ -1,1 +1,6 @@
-/* TODO
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+  box-sizing: border-box !important;
+  font-family: 'Inconsolata', monospace !important;
+}
