@@ -9,6 +9,7 @@ const noLinksFoundHandler = () => (helpfulLinks.textContent = 'Nothing Found!');
 
 const filterResults = () => {
   helpfulLinks.innerHTML = null;
+  resultCount.textContent = null;
 
   const searchedValue = searchField.value.trim();
 
