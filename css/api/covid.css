@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+  box-sizing: border-box !important;
+  font-family: 'Inconsolata', monospace !important;
+}
+
+#country {
+  width: 50%;
+}
+
+#search-field {
+  justify-content: center;
+  display: flex;
+}
+
+#search-btn,
+#search-field input {
+  border-radius: 0px !important;
+}
+
+#search-btn {
+  margin-left: -3px;
+}
+
+.country-data-wrapper {
+  display: flex;
+  width: fit-content;
+}
+
+.country-data-key {
+  font-weight: bold;
+  color: rgb(7, 187, 61);
+  margin-right: 5px;
+  width: fit-content;
+  font-size: 1.2em;
+}
+
+.country-data-value {
+  color: white;
+  width: fit-content;
+}
+
+#covid-img-wrapper {
+  text-align: center;
+  margin-top: 200px;
+}
+
+#country-data-items {
+  box-shadow: 1px 1px 5px rgba(32, 32, 32, 0.87);
+  animation: 1.5s scroll-up-country-data;
+  padding: 30px 40% 30px 40%;
+  display: none;
+}
+
+#country-data-items-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  height: fit-content;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  padding-top: 150px;
+  background-color: #343a40;
+  height: 100%;
+  z-index: -1;
+}
+
+@keyframes scroll-up-country-data {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
