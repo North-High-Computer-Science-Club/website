@@ -4,11 +4,11 @@ const searchedCountry = document.getElementById('country');
 const covidImgWrapper = document.getElementById('covid-img-wrapper');
 const noResultsFound = document.getElementById('no-results-found');
 
-const hideSpinner = () => (loadingSpinner.style.display = 'none');
 const deleteInput = () => (searchedCountry.value = null);
+const deleteChildren = (element) => (element.innerHTML = null);
 const makeBlock = (element) => (element.style.display = 'block');
 const hideElement = (element) => (element.style.display = 'none');
-const deleteChildren = (element) => (element.innerHTML = null);
+const hideSpinner = () => (loadingSpinner.style.display = 'none');
 const createElement = (element) => document.createElement(element);
 const setText = (element, text) => (element.textContent = text);
 

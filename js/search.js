@@ -3,18 +3,20 @@ const helpfulLinks = document.getElementById('helpful-links');
 const modalTitle = document.getElementById('modal-title');
 const resultCount = document.getElementById('result-count');
 
-const links = () => ['Home', 'Contact', 'About'];
+const links = () => ['Home', 'Contact', 'About', 'COVID-19 Tracker~/api/covid'];
 
 const noLinksFoundHandler = () => (helpfulLinks.textContent = 'Nothing Found!');
 
-const filterResults = () => {
+const filterResults = (HTMLType = 'page') => {
   helpfulLinks.innerHTML = null;
   resultCount.textContent = null;
 
   const searchedValue = searchField.value.trim();
 
-  if (!searchedValue) {
-    modalTitle.textContent = `Helpful Links Found For ''`;
+  if (!searchedValue || searchedValue === '~' || searchedValue === '/') {
+    searchedValue === ''
+      ? (modalTitle.textContent = `Helpful Links Found For ''`)
+      : (modalTitle.textContent = `Helpful Links Found For '${searchedValue}'`);
     noLinksFoundHandler();
   } else {
     modalTitle.textContent = `Helpful Links Found For '${searchedValue}'`;
@@ -33,7 +35,15 @@ const filterResults = () => {
         helpfulLinkWrapper.className = 'helpful-link-wrapper';
 
         helpfulLink.textContent = matchingLink;
-        helpfulLink.href = `./pages/${matchingLink.toLowerCase()}.htm`;
+
+        if (matchingLink.includes('~')) {
+          helpfulLink.href = `./pages${
+            matchingLink.toLowerCase().split('~')[1]
+          }.htm`;
+          helpfulLink.textContent = matchingLink.split('~')[0];
+        } else {
+          helpfulLink.href = `./pages/${matchingLink.toLowerCase()}.htm`;
+        }
 
         helpfulLinkWrapper.append(helpfulLink);
         helpfulLinks.appendChild(helpfulLinkWrapper);
