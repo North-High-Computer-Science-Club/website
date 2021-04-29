@@ -65,7 +65,28 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item dropdown" id="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="entertainment-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="entertainment-dropdown-links">
+            <a class="dropdown-item" href="./pages/api/covid">COVID-19 Tracker</a>
+            <a class="dropdown-item" href="./pages/api/movie">Movie Searcher</a>
+            <a class="dropdown-item" href="https://{chat-live-server-link}">Chat Live</a>
+            <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="./pages/entertainment/website">This Website</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" id="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programming-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="programming-dropdown-links">
+            <a class="dropdown-item" href="./pages/programming/npm">NPM Packages</a>
+            <a class="dropdown-item" href="./pages/programming/hackathons">Hackathons</a>
+            <a class="dropdown-item" href="./pages/programming/github">Github</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="./pages/api/sandbox">Code In Sandbox</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="./pages/about.htm" id="about"><span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
@@ -73,12 +94,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./pages/contact.htm" id="contact"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="website"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="chat-live"></a>
         </li>
       </ul>
       <div id="search-wrapper">
@@ -95,7 +110,9 @@
       </div>
       <div id="home__cta-btns">
         <button type="btn" class="btn btn-outline-success">Join</button>
-        <button type="btn" class="btn btn-success">Learn More</button>
+        <a href="./pages/about.htm">
+          <button type="btn" class="btn btn-success">Learn More</button>
+        </a>
       </div>
       <div class="loader">Loading...</div>
     </section>

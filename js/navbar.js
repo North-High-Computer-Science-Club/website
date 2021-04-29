@@ -10,6 +10,10 @@ const membersLink = document.getElementById('members');
 const contactLink = document.getElementById('contact');
 const websiteLink = document.getElementById('website');
 const chatLiveLink = document.getElementById('chat-live');
+const entertainmentDropdownLink = document.getElementById(
+  'entertainment-dropdown'
+);
+const programmingDropdownLink = document.getElementById('programming-dropdown');
 
 const printLink = (linkId, link, iteration, printNextLink) => {
   setTimeout(() => {
@@ -23,11 +27,11 @@ const printLink = (linkId, link, iteration, printNextLink) => {
   }, 50);
 };
 
-printLink(aboutLink, '</About>', 0, () => {
-  printLink(membersLink, '</Members>', 0, () => {
-    printLink(contactLink, '</Contact>', 0, () => {
-      printLink(websiteLink, '</Website>', 0, () => {
-        printLink(chatLiveLink, '</Chat Live>', 0, () => {
+printLink(entertainmentDropdownLink, '</Entertainment', 0, () => {
+  printLink(programmingDropdownLink, '</Programming>', 0, () => {
+    printLink(aboutLink, '</About>', 0, () => {
+      printLink(membersLink, '</Members>', 0, () => {
+        printLink(contactLink, '</Contact>', 0, () => {
           console.log('Callback hell complete...');
         });
       });
