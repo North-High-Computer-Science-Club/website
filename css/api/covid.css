@@ -12,6 +12,7 @@
 #search-field {
   justify-content: center;
   display: flex;
+  animation: 2s scroll-up-search-field;
 }
 
 #search-btn,
@@ -43,7 +44,7 @@
 
 #covid-img-wrapper {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 #country-data-items {
@@ -51,6 +52,17 @@
   animation: 1.5s scroll-up-country-data;
   padding: 30px 40% 30px 40%;
   display: none;
+}
+
+#loading-spinner {
+  margin-left: 5px;
+  display: none;
+}
+
+#no-results-found {
+  display: none;
+  text-align: center;
+  color: rgb(7, 187, 61);
 }
 
 #country-data-items-wrapper {
@@ -73,6 +85,16 @@ main {
 }
 
 @keyframes scroll-up-country-data {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
+
+@keyframes scroll-up-search-field {
   from {
     margin-top: 100%;
   }
