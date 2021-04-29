@@ -4,10 +4,6 @@ official website for Great Neck North's Computer Science Club
 
 Everything indicated by the "$" means that what follows is written in the terminal/command prompt
 
-# Installing dependancies
-
-    - $npm install
-
 # Comitting through git
 
     - $ git add .
