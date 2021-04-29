@@ -13,6 +13,13 @@
   - Getting rid of Bootstrap's default input box shadow on :focus
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+  box-sizing: border-box !important;
+  font-family: 'Inconsolata', monospace !important;
+}
+
 :root {
   --plainWhite: #ddd;
 }

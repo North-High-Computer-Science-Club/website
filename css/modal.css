@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+* {
+  box-sizing: border-box !important;
+  font-family: 'Inconsolata', monospace !important;
+}
+
+#modal-content {
+  background-color: #343a40 !important ;
+}
+
+.helpful-link-wrapper {
+  list-style: none;
+}
+
+.helpful-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: white !important;
+  opacity: 1 !important;
+  transition: 0.2s;
+}
+
+.helpful-link:hover {
+  opacity: 1.5 !important;
+  font-weight: bold !important;
+}
+
+.helpful-link:link,
+.helpful-link:visited {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.helpful-link:hover,
+.helpful-link:active {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  text-shadow: 0 0.5rem 1rem black;
+}
+
+#helpful-links,
+#close-modal,
+#modal-title {
+  color: white;
+}
+
+#result-count {
+  font-size: 1rem;
+  color: #28a745;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#helpful-links {
+  padding: 0px;
+}
