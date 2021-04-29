@@ -3,11 +3,16 @@ const helpfulLinks = document.getElementById('helpful-links');
 const modalTitle = document.getElementById('modal-title');
 const resultCount = document.getElementById('result-count');
 
-const links = () => ['Home', 'Contact', 'About', 'COVID-19 Tracker~/api/covid'];
+const links = () => [
+  { name: 'Home', file: 'index.htm' },
+  { name: 'Contact', file: 'contact.htm' },
+  { name: 'About', file: 'about.htm' },
+  { name: 'COVID-19 Tracker', file: 'covid.htm' },
+];
 
 const noLinksFoundHandler = () => (helpfulLinks.textContent = 'Nothing Found!');
 
-const filterResults = (HTMLType = 'page') => {
+const filterResults = (HTMLPath = 'page') => {
   helpfulLinks.innerHTML = null;
   resultCount.textContent = null;
 
@@ -24,8 +29,8 @@ const filterResults = (HTMLType = 'page') => {
     links()
       .filter(
         (link) =>
-          link.toUpperCase().includes(searchedValue.toUpperCase()) ||
-          searchedValue.toUpperCase().includes(link.toUpperCase())
+          link.name.toUpperCase().includes(searchedValue.toUpperCase()) ||
+          searchedValue.toUpperCase().includes(link.name.toUpperCase())
       )
       .forEach((matchingLink) => {
         const helpfulLink = document.createElement('a');
@@ -34,16 +39,17 @@ const filterResults = (HTMLType = 'page') => {
         helpfulLink.className = 'helpful-link';
         helpfulLinkWrapper.className = 'helpful-link-wrapper';
 
-        helpfulLink.textContent = matchingLink;
-
-        if (matchingLink.includes('~')) {
-          helpfulLink.href = `./pages${
-            matchingLink.toLowerCase().split('~')[1]
-          }.htm`;
-          helpfulLink.textContent = matchingLink.split('~')[0];
+        if (HTMLPath === 'index') {
+          helpfulLink.href = `./pages/${matchingLink.file}`;
         } else {
-          helpfulLink.href = `./pages/${matchingLink.toLowerCase()}.htm`;
+          if (matchingLink.name === 'Home') {
+            helpfulLink.href = `../${matchingLink.file}`;
+          } else {
+            helpfulLink.href = `./${matchingLink.file}`;
+          }
         }
+
+        helpfulLink.textContent = matchingLink.name;
 
         helpfulLinkWrapper.append(helpfulLink);
         helpfulLinks.appendChild(helpfulLinkWrapper);
