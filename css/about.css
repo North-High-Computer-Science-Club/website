@@ -4,3 +4,14 @@
   box-sizing: border-box !important;
   font-family: 'Inconsolata', monospace !important;
 }
+
+#about-content-wrapper {
+  position: absolute;
+  margin-top: 150px; 
+  width: 100%;
+} 
+
+#about-header {
+  text-align: center;
+}
+
